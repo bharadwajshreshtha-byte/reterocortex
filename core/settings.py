@@ -23,13 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#9chdrpyi!&@_3h00bzs6i1qj2-hm2knut0m)nh_8wu98i9sq3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost',
                 '127.0.0.1',
-                'reterocortex.onrender.com'
-                'reterocortex.com',
-                'www.reterocortex.com',]
+                 "reterocortex.onrender.com",
+                  "reterocortex.com",
+                  "www.reterocortex.com",
+                ]
 
 
 # Application definition
