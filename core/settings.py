@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
                 '127.0.0.1',
-                'reterocortex.onrender.com']
+                'reterocortex.onrender.com'
+                'reterocortex.com',
+                'www.reterocortex.com',]
 
 
 # Application definition
