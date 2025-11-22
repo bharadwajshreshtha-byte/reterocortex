@@ -1,0 +1,198 @@
+/* =========================================
+   GLOBAL THEME
+   ========================================= */
+:root {
+    --bg-dark: #0a0f1f;
+    --bg-card: #11182c;
+    --text-light: #e8ecf7;
+    --text-muted: #98a2b3;
+    --primary: #0aa3ff;
+    --primary-glow: rgba(0, 170, 255, 0.6);
+    --gradient-hero: linear-gradient(135deg, #0d1b2a, #0a0f1f, #001b3d);
+    --gradient-card: linear-gradient(135deg, #12243d, #0c1a2c);
+    --transition: 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+header {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header nav a {
+    color: var(--text-light);
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+header nav a:hover {
+    color: var(--primary);
+}
+
+/* =========================================
+   CONTENT WRAPPER
+   ========================================= */
+.content {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+    padding: 120px 20px;
+    text-align: center;
+    background: var(--gradient-hero);
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.2);
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h2 {
+    font-size: 50px;
+    background: linear-gradient(90deg, #66d1ff, #0aa3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: var(--transition);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--primary-glow);
+}
+
+/* =========================================
+   FEATURES SECTION
+   ========================================= */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.feature-card {
+    width: 300px;
+    padding: 25px;
+    border-radius: 14px;
+    background: var(--gradient-card);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 28px var(--primary-glow);
+}
+
+.feature-card h3 {
+    color: #74c7ff;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+@keyframes fadeIn {
+    from { opacity:0; transform: translateY(20px); }
+    to { opacity:1; transform: translateY(0); }
+}
+/* =========================================
+   LOGO GLOW (SUBTLE VERSION)
+   ========================================= */
+.logo-glow {
+    width: 75px;
+    height: 75px;
+
+    /* subtle glow */
+    filter: drop-shadow(0 0 6px #0aa3ff80)
+            drop-shadow(0 0 12px #0aa3ff40);
+
+    transition: 0.3s ease;
+}
+
+/* gentle hover glow */
+.logo-glow:hover {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 10px #0aa3ff80)
+            drop-shadow(0 0 20px #0aa3ff50);
+}
+/* =========================================
+   CONTACT CARD (GLASS PANEL)
+   ========================================= */
+.contact-card {
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    margin-top: 20px;
+}
+
+.contact-card p {
+    color: #c6ccda;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.contact-card strong {
+    color: #e6e9f5;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReteroCortex</title>
+
+    <!-- Global stylesheet -->
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+</head>
+
+<body>
+
+<!-- NAVBAR / HEADER -->
+<header>
+    <h1 style="display: flex; align-items: center; gap: 10px; margin: 0;">
+        <img src="{% static 'website/logo4.png' %}"
+             alt="ReteroCortex Logo"
+             class="logo-glow"
+
+             style="width: 75px; height: 75px; object-fit: contain;">
+
+        ReteroCortex
+    </h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/contact/">Contact</a>
+        <a href="/about/">About</a>
+        <a href="/accounts/login/">Login</a>
+        <a href="/accounts/signup/">Signup</a>
+
+    </nav>
+</header>
+
+
+<!-- MAIN CONTENT AREA -->
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 ReteroCortex — All Rights Reserved.
+</footer>
+
+</body>
+</html>

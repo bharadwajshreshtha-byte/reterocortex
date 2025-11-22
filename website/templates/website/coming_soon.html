@@ -1,0 +1,26 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="hero" style="padding: 150px 20px;">
+
+    <img src="{% static 'website/logo4.png' %}"
+         alt="ReteroCortex Logo"
+         class="logo-glow"
+         style="width: 120px; height: 120px;">
+
+    <h2 style="font-size: 55px; margin-top: 25px;">
+        ReteroCortex
+    </h2>
+
+    <p style="font-size: 22px; max-width: 650px; margin: 20px auto;">
+        The future of AI-driven intelligence begins soon.
+    </p>
+
+    <p style="font-size: 18px; opacity: 0.8;">
+        Launching in 2027.
+    </p>
+
+</section>
+
+{% endblock %}
